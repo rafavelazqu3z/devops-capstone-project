@@ -57,6 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
+
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
@@ -108,7 +109,6 @@ def update_accounts(account_id):
     account.deserialize(request.get_json())
     account.update()
     return account.serialize(), status.HTTP_200_OK
-
 
 
 ######################################################################
